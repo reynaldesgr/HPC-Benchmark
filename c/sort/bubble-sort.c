@@ -23,6 +23,7 @@ void bubbleSort(int arr[], int n)
     }
 }
 
+/*
 void print(int arr[], int size) 
 {
     for (int i = 0; i < size; i++) 
@@ -30,7 +31,7 @@ void print(int arr[], int size)
         printf("%d ", arr[i]);
     }
     printf("\n");
-}
+}*/
 
 int main()
 {
@@ -41,7 +42,7 @@ int main()
 
 
     bubbleSort(tab, 100000);
-    print(tab, 100000);
+    //print(tab, 100000);
 
     return 0;
 }
