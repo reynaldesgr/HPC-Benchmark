@@ -1,8 +1,8 @@
 #!/bin/bash
 
-path="./"
+base_path="./"
 
-cd "${base_pth}c/sort"
+cd "${base_path}c/sort"
 gcc bubble-sort.c -o bubble-sort_c
 echo "[Bubble sort] - run C file..."
 time ./bubble-sort_c

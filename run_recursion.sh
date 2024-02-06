@@ -1,8 +1,8 @@
 #!/bin/bash
 
-path="./"
+base_path="./"
 
-cd "${base_pth}c/recursion"
+cd "${base_path}c/recursion"
 gcc fibonacci.c -o fibo_c
 echo "[Recursion] - run C file..."
 time ./fibo_c
