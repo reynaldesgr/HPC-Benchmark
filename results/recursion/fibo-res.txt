@@ -1,0 +1,26 @@
+n = 45
+
+[Recursion] - run C file...
+C result : 1134903170
+
+real    0m9.191s
+user    0m9.191s
+sys     0m0.000s
+[Recursion] - run Python file...
+Python result : 1134903170
+
+real    3m27.025s
+user    3m27.015s
+sys     0m0.010s
+[Recursion] - run Rust file...
+Rust result : 1134903170
+
+real    0m11.881s
+user    0m11.881s
+sys     0m0.000s
+[Recursion] - run Erlang file...
+Erlang result : 1134903170
+
+real    0m17.035s
+user    0m16.130s
+sys     0m0.091s
