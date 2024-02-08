@@ -4,10 +4,6 @@ struct TreeNode {
 }
 
 impl TreeNode {
-    fn new() -> TreeNode {
-        TreeNode { left: None, right: None }
-    }
-
     fn make_tree(depth: i32) -> Option<Box<TreeNode>> {
         if depth > 0 {
             let left = TreeNode::make_tree(depth - 1);
