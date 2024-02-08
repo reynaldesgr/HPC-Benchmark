@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SEQUENCE_LENGTH 50
-#define NUM_SEQUENCES 5
+#define SEQUENCE_LENGTH 60
+#define NUM_SEQUENCES 25000
 
 /* Function to generate a single random DNA base */
 char generate_random_base() {

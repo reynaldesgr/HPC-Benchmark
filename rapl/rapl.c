@@ -175,12 +175,12 @@ int rapl_init(int core)
   energy_units=pow(0.5,(double)((result>>8)&0x1f));
   time_units=pow(0.5,(double)((result>>16)&0xf));
 
-  /*
+  
   printf("Power units = %.3fW\n",power_units);
   printf("Energy units = %.8fJ\n",energy_units);
   printf("Time units = %.8fs\n",time_units);
   printf("\n");
-  */
+  
 
 
   return 0;
@@ -212,15 +212,11 @@ void show_power_info(int core)
   printf("Package maximum time window: %.6fs\n",time_window);
 }
 
-
-
 void show_power_limit(int core)
 { int fd;
   long long result;
-
-
  /* Show package power limit */
-
+ 
   fd=open_msr(core);
   result=read_msr(fd,MSR_PKG_RAPL_POWER_LIMIT);
 
@@ -241,8 +237,6 @@ void show_power_limit(int core)
 }
 
 
-
-
 void rapl_before(FILE * fp,int core)
 { int fd;
   long long result;
@@ -252,7 +246,7 @@ void rapl_before(FILE * fp,int core)
   result=read_msr(fd,MSR_PKG_ENERGY_STATUS);
 
   package_before=(double)result*energy_units;
-  //  fprintf(fp,"Package energy: %.6fJ\n",package_before);
+  //fprintf(fp,"Package energy: %.6fJ\n",package_before);
 
   /* only available on *Bridge-EP */
   if ((cpu_model==CPU_SANDYBRIDGE_EP) || (cpu_model==CPU_IVYBRIDGE_EP))
@@ -309,13 +303,13 @@ void rapl_after(FILE * fp , int core)
 
   result=read_msr(fd,MSR_PKG_ENERGY_STATUS);
   package_after=(double)result*energy_units;
-  //  fprintf(fp,"Package energy: %.6fJ consumed\n",package_after-package_before);
-  fprintf(fp,"%.18f, ",package_after-package_before);  // PACKAGE
+  // fprintf(fp,"Package energy: %.6fJ consumed\n",package_after-package_before);
+  fprintf(fp,"%.18f, ",package_after-package_before); // PACKAGE
 
   result=read_msr(fd,MSR_PP0_ENERGY_STATUS);
   pp0_after=(double)result*energy_units;
 
-  fprintf(fp,"%.18f, ",pp0_after-pp0_before);    // CORE
+  fprintf(fp,"%.18f, ",pp0_after-pp0_before); // CORE
 
 
   /* not available on SandyBridge-EP */
@@ -323,7 +317,7 @@ void rapl_after(FILE * fp , int core)
   (cpu_model==CPU_HASWELL)) {
      result=read_msr(fd,MSR_PP1_ENERGY_STATUS);
      pp1_after=(double)result*energy_units;
-     fprintf(fp,"%.18f, ",pp1_after-pp1_before);     // GPU
+     fprintf(fp,"%.18f, ",pp1_after-pp1_before); // GPU
   }
   else
     fprintf(fp," , ");
@@ -332,7 +326,7 @@ void rapl_after(FILE * fp , int core)
   (cpu_model==CPU_HASWELL)) {
      result=read_msr(fd,MSR_DRAM_ENERGY_STATUS);
      dram_after=(double)result*energy_units;
-     fprintf(fp,"%.18f, ",dram_after-dram_before);     // DRAM
+     fprintf(fp,"%.18f, ",dram_after-dram_before); // DRAM
   }
   else
     fprintf(fp," , ");  

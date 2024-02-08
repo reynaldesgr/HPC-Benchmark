@@ -37,7 +37,7 @@ int main() {
         int depth = 22;
         TreeNode* tree = make_tree(depth);
         int total_nodes = check_tree(tree);
-        printf("Tree of depth %d has %d nodes.\n", depth, total_nodes);
+        //printf("Tree of depth %d has %d nodes.\n", depth, total_nodes);
         free_tree(tree);
     }
     return 0;

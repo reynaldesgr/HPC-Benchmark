@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int fannkuch(int n) {
-    int *perm = malloc(n * sizeof(int));
+    int *perm  = malloc(n * sizeof(int));
     int *perm1 = malloc(n * sizeof(int));
     int *count = malloc(n * sizeof(int));
     int maxFlips = 0, permCount = 0, checksum = 0;

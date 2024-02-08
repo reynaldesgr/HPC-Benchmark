@@ -1,4 +1,4 @@
--module(binary_tree).
+-module(binary_trees).
 -export([main/0, make_tree/1, check_tree/1]).
 
 -record(tree, {left, right}).
