@@ -1,6 +1,6 @@
 import random
 import sys
-import multiprocessing as mp
+#import multiprocessing as mp
 
 def make_tree(depth):
     """
@@ -29,7 +29,7 @@ def main():
     Main function to drive the tree creation and checking for 21 trees.
     """
     for _ in range(21):
-        depth = 30
+        depth = 22
         tree = make_tree(depth)
         total_nodes = check_tree(tree)
         print(f'Tree of depth {depth} has {total_nodes} nodes.')
