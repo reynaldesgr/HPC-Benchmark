@@ -9,21 +9,22 @@ def run_program(command, output_path="program_output.txt", timeout=3600):
         start = time.time()
         cpu_time = 0
         max_memory_usage = 0
-        # Execute the command passed as a list to subprocess.Popen
-        process = subprocess.Popen(command, stdout=output_file, stderr=subprocess.STDOUT, shell=True)
+        
+        process = subprocess.Popen(command, stdout=output_file, stderr=subprocess.STDOUT)
         ps_process = psutil.Process(process.pid)  # Wrap subprocess with psutil to monitor
 
         try:
             while process.poll() is None:
-                time.sleep(1)
-                cpu_time = ps_process.cpu_times().user + ps_process.cpu_times().system
+                time.sleep(1)  # Sleep to prevent spamming CPU usage checks
+                cpu_times = ps_process.cpu_times()
+                cpu_time = cpu_times.user + cpu_times.system
                 current_memory_usage = ps_process.memory_info().rss / 1024  # Convert to KB
                 if current_memory_usage > max_memory_usage:
                     max_memory_usage = current_memory_usage
 
                 if time.time() - start > timeout:
                     ps_process.kill()
-                    raise subprocess.TimeoutExpired(" ".join(command), timeout)
+                    raise subprocess.TimeoutExpired(command, timeout)
 
             end = time.time()
         except subprocess.TimeoutExpired:
@@ -49,10 +50,9 @@ def main(command):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run a command and check its performance.")
-    # Modification here to accept a complete command
     parser.add_argument('command', type=str, nargs='+', help="Command to be executed.")
     
     args = parser.parse_args()
+    command = args.command if len(args.command) > 1 else args.command[0]
     
-    # Passing the command as a list to the main function
-    main(args.command)
+    main(command.split())

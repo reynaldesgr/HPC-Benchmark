@@ -76,15 +76,15 @@ static void repeat_fasta(const char *seq,
   }
 
   int whole_buffers = n / (len*LINELEN);
-  for (i=0; i< whole_buffers; i++) write(1, buffer2, buflen2);
+  for (i=0; i< whole_buffers; i++)  //write(1, buffer2, buflen2);
 
   int data_remaining = n - whole_buffers * len * LINELEN;
   int embedded_newlines = data_remaining / LINELEN;
-  write(1, buffer2, data_remaining + embedded_newlines);
+  //write(1, buffer2, data_remaining + embedded_newlines);
 
   free(buffer1);
   free(buffer2);
-  if (n % LINELEN != 0) write(1, "\n", 1);
+  if (n % LINELEN != 0) //write(1, "\n", 1);
 }
 
 static char * build_hash(const char *symb,const float *probability) {
@@ -132,7 +132,7 @@ static void random_fasta(const char *symb,
 	buffer[j*(LINELEN+1)+k] = hash[v];
       }
     }
-    write(1, buffer, (LINELEN+1)*BUFLINES);
+    //write(1, buffer, (LINELEN+1)*BUFLINES);
   }
 
   /* handle remaining whole and partial lines as separate cases
@@ -149,10 +149,10 @@ static void random_fasta(const char *symb,
     uint32_t v = uint32_rand();
     buffer[lines*(LINELEN+1)+k] = hash[v];
   }
-  write(1, buffer, lines*(LINELEN+1)+partials);
+  //write(1, buffer, lines*(LINELEN+1)+partials);
 
   /* unless entire output is an exact multiple of a linelength, add a newline */
-  if (n % LINELEN != 0) write(1, "\n", 1);
+  if (n % LINELEN != 0) //write(1, "\n", 1);
   
   free(buffer);
   free(hash);
@@ -166,14 +166,14 @@ int main(int argc, char **argv) {
   int n=1000;
   if (argc>1) n = atoi(argv[1]);
 
-  write(1, header1, sizeof(header1)-1);
-  repeat_fasta(alu, n*2);
+  //write(1, header1, sizeof(header1)-1);
+  //repeat_fasta(alu, n*2);
 
-  write(1, header2, sizeof(header2)-1);
-  random_fasta(iub, iub_p, n*3);
+  //write(1, header2, sizeof(header2)-1);
+  //random_fasta(iub, iub_p, n*3);
 
-  write(1, header3, sizeof(header3)-1);
-  random_fasta(homosapiens, homosapiens_p, n*5);
+  //write(1, header3, sizeof(header3)-1);
+  //random_fasta(homosapiens, homosapiens_p, n*5);
 
   return 0;
 }

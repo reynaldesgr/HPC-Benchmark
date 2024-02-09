@@ -1,15 +1,25 @@
+serveur19 
+
 Benchmark, Langage, Real Time (s), User Time (s), Sys Time (s), Watts (w), Joules (J)
-Binary Trees, C, 6.101, 6.013, 0.084
-Binary, Rust, 10.081, 9.986, 0.084
-Binary Trees, Python, 66.468, 63.078, 3.360
-Binary Trees, Erlang, 6.982, 5.321, 0.980
-Fannkuch-Redux, C,
-Fannkuch-Redux, Python,
-Fannkuch-Redux, Rust,
-Fannkuch-Redux, Erlang,
+
+Binary Trees, C, 4.821, 4.727, 0.0920
+Binary Trees, Erlang, 5.975, 6.203, 2.911
+Binary, Rust, 14.352, 14.314, 0.0360
+Binary Trees, Python, 36.431, 33.829, 2.569
+
+Fannkuch-Redux, C, 75.773, 75.767, 0.000
+Fannkuch-Redux, Erlang, 571.692, 395.722, 188.534
+Fannkuch-Redux, Python, 13.534, 33m8.482, 2.176
+Fannkuch-Redux, Rust, 476.835, 476.792, 0.005
+
+
+Fasta, C, 32.679, 2.503, 9.594
+Fasta, Erlang,
+Fasta, Python, 62.535, 50.050, 9.537
+Fasta, Rust, 72.896, 13.907, 11.637
 ==========================================================
-Binary trees    Fannkuch-Redux
-C               
-Erlang 
-Rust 
-Python
+Binary trees    Fannkuch-Redux      Fasta
+C               C                   
+Erlang          Rust
+Rust            Erlang
+Python          Python
