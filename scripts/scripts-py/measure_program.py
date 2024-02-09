@@ -3,7 +3,6 @@ import subprocess
 import os
 import sys
 import time
-from time_memory_measurement import measure_time_memory
 import signal
 import psutil
 

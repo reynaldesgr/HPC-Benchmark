@@ -8,7 +8,7 @@ base_path="../../"
 #cd "${base_path}c/fasta"
 #gcc fasta.c -o fasta
 #echo "[Fasta] - run C file..."
-#time ./fasta
+#time ./fasta 25000000
 #cd - > /dev/null
 
 ################################################
@@ -18,11 +18,6 @@ base_path="../../"
 #echo "[Fasta] - run Python file..."
 #time python3 fasta.py
 #cd - > /dev/null
-
-cd "${base_path}python/fannkuch-redux"
-echo "[Fannkuch redux] - run Python file..."
-time python3 fannkuch-redux.py
-cd - > /dev/null
 
 #################################################
 
@@ -34,8 +29,3 @@ cd - > /dev/null
 
 #################################################
 
-cd "${base_path}erlang/fannkuch-redux"
-erlc fannkuch.erl
-echo "[Fannkuch redux] - run Erlang file..."
-time erl -noshell -s fannkuch main -s init stop
-cd - > /dev/null
