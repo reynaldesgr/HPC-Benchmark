@@ -22,7 +22,7 @@ echo -e "\n\n"
 ################################################
 cd "${base_path}python/fannkuch-redux"
 echo "[Fannkuch redux] - run Python file..."
-time python3 fannkuch-redux
+time python3 fannkuch-redux.py
 cd - > /dev/null
 
 #################################################
