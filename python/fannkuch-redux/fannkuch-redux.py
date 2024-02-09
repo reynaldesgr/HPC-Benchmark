@@ -1,38 +1,78 @@
-def fannkuch(n):
-    # Generate the initial permutation of numbers from 1 to n
-    perm = list(range(1, n + 1))
-    count = [0] * (n + 1)
-    max_flips = 0
-    total_flips = 0
-    perm_count = 0
+from sys import argv
+from math import factorial
+from multiprocessing import cpu_count, Pool
+from itertools import islice, starmap
 
-    while True:
-        # Check if the first element is not 1 (since we want to count flips)
-        if perm[0] != 1:
-            flips_count = 0
-            perm_copy = perm[:]
-            while perm_copy[0] != 1:
-                perm_copy[:perm_copy[0]] = reversed(perm_copy[:perm_copy[0]])
+def permutations(n, start, size):
+    p = bytearray(range(n))
+
+    remainder = start
+    for v in range(n - 1, 0, -1):
+        rotation_count, remainder = divmod(remainder, factorial(v))
+        for _ in range(rotation_count):
+            p[:v], p[v] = p[1:v + 1], p[0]
+
+    if size < 2:
+        yield p[:]
+    else:
+        rotations = [(v, factorial(v)) for v in range(3, n)]
+        for i in range(start + 2, start + size + 2, 2):
+            yield p[:]
+            p[0], p[1] = p[1], p[0]
+            yield p[:]
+            p[1], p[2] = p[2], p[1]
+            for v, modulo in rotations:
+                if i % modulo != 0:
+                    break
+                p[:v], p[v] = p[1:v + 1], p[0]
+
+def alternating_flips_generator(n, start, size):
+    maximum_flips = 0
+    alternating_factor = 1
+    for permutation in permutations(n, start, size):
+        first = permutation[0]
+        if first:
+            flips_count = 1
+            while True:
+                permutation[:first + 1] = permutation[first::-1]
+                first = permutation[0]
+                if not first: break
                 flips_count += 1
-            max_flips = max(max_flips, flips_count)
-            total_flips += flips_count
-
-        # Generate the next permutation
-        i = 1
-        while i < n:
-            count[i] += 1
-            if count[i] > i:
-                count[i] = 0
-                perm = perm[:i] + [perm[i+1]] + [perm[i]] + perm[i+2:]
-                i += 1
-            else:
-                break
+            if maximum_flips < flips_count:
+                maximum_flips = flips_count
+            yield flips_count * alternating_factor
         else:
-            break
-        perm_count += 1
+            yield 0
+        alternating_factor = -alternating_factor
+    yield maximum_flips
 
-    return max_flips, total_flips, perm_count
+def task(n, start, size):
+    alternating_flips = alternating_flips_generator(n, start, size)
+    return sum(islice(alternating_flips, size)), next(alternating_flips)
 
-n = 12
-max_flips, total_flips, perm_count = fannkuch(n)
-print(f"Maximum flips: {max_flips}, Total flips: {total_flips}, Permutations: {perm_count}")
+def fannkuch(n):
+    assert(n > 0)
+
+    task_count = cpu_count()
+    total = factorial(n)
+    task_size = (total + task_count - 1) // task_count
+
+    if task_size < 20000:
+        task_size = total
+        task_count = 1
+
+    assert(task_size % 2 == 0)
+
+    task_args = [(n, i * task_size, task_size) for i in range(task_count)]
+
+    if task_count > 1:
+        with Pool() as pool:
+            checksums, maximums = zip(*pool.starmap(task, task_args))
+    else:
+        checksums, maximums = zip(*starmap(task, task_args))
+
+    checksum, maximum = sum(checksums), max(maximums)
+    print("{0}\nPfannkuchen({1}) = {2}".format(checksum, n, maximum))
+
+if __name__ == "__main__":
+    fannkuch(12)

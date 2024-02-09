@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base_path="./"
+base_path="../.."
 
 cd "${base_path}c/recursion"
 gcc fibonacci.c -o fibo_c

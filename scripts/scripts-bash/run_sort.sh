@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base_path="./"
+base_path="../.."
 
 cd "${base_path}c/sort"
 gcc bubble-sort.c -o bubble-sort_c

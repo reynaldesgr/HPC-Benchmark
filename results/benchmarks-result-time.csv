@@ -1,0 +1,15 @@
+Benchmark, Langage, Real Time (s), User Time (s), Sys Time (s), Watts (w), Joules (J)
+Binary Trees, C, 6.101, 6.013, 0.084
+Binary, Rust, 10.081, 9.986, 0.084
+Binary Trees, Python, 66.468, 63.078, 3.360
+Binary Trees, Erlang, 6.982, 5.321, 0.980
+Fannkuch-Redux, C, 160.623, 160.585
+Fannkuch-Redux, Python,
+Fannkuch-Redux, Rust,
+Fannkuch-Redux, Erlang,
+==========================================================
+Binary trees
+C 
+Erlang 
+Rust 
+Python

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base_path="./"
+base_path="../../"
 
 cd "${base_pth}c/regex"
 gcc pattern-search.c -o pattern-search_c

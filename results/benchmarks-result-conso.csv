@@ -1,0 +1,7 @@
+Benchmark, Langage, Cores (J), Package (J), Time (seconds)
+Binary-Trees, C, 23.54, 29.19, 6
+Binary-Trees, Rust, 40.45, 49.02, 10
+Binary-Trees, Python, 190.25, 223.83, 61.8
+Binary-Trees, Erlang, 21.30, 26.25, 7.04
+
+
