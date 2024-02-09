@@ -16,7 +16,8 @@ Fannkuch-Redux, Rust, 476.835, 476.792, 0.005
 Fasta, C, 32.679, 2.503, 9.594
 Fasta, Erlang,
 Fasta, Python, 62.535, 50.050, 9.537
-Fasta, Rust, 72.896, 13.907, 11.637
+Fasta, Rust, 57.546, 44.255, 8.157
+
 ==========================================================
 Binary trees    Fannkuch-Redux      Fasta
 C               C                   
