@@ -1,49 +1,102 @@
 -module(fannkuch).
--export([fannkuch_redux/1, main/0]).
 
-% Entry function that calculates the fannkuch redux value for n.
-fannkuch_redux(N) ->
-    Permutations = perms(lists:seq(1, N)),
-    FannkuchValues = [fannkuch(P) || P <- Permutations],
-    lists:max(FannkuchValues).
+-compile([native, {hipe, [o3]}]).
 
-% Calculates the fannkuch value for a single permutation.
-fannkuch(P) ->
-    fannkuch(P, 0).
+-export([main/1]).
 
-fannkuch([1 | _T], Flips) ->
-    Flips;
-fannkuch(P, Flips) ->
-    fannkuch(flip(P, find(P, 1)), Flips + 1).
+main([Arg]) ->
+    main(list_to_integer(Arg)),
+    halt(0);
+main(N) when N > 0 ->
+    {MaxFlips, Checksum} = 
+	case N of
+	    1 -> {0, 0};
+	    _Other ->
+		Chunk = fact(N - 1),
+		divide(0, N, lists:seq(1, N), Chunk),
+		join(N, 0, 0)
+	end,
+    io:format("~p~nPfannkuchen(~p) = ~p~n", [Checksum, N, MaxFlips]),
+    {MaxFlips, Checksum}.
 
-% Flips the first N elements of the list.
-flip(List, N) ->
-    {Reversed, Remain} = lists:split(N, List),
-    lists:reverse(Reversed) ++ Remain.
+divide(N, N, _L, _C) -> ok;
+divide(N, MaxN, [H|T] = List, Chunk) ->
+    Self = self(),
+    Fun = fun() ->
+	      work(N, List, N * Chunk, (N + 1) * Chunk, MaxN, 0, 0, Self)
+	  end,
+    spawn(Fun),
+    divide(N + 1, MaxN, T ++ [H], Chunk).
 
-% Finds the position of the element in the list.
-find(List, Element) ->
-    find(List, Element, 1).
+join(0, MaxFlips, Checksum) -> {MaxFlips, Checksum};
+join(N, MaxFlips, Checksum) ->
+    receive
+	{Flips, Sum} -> join(N - 1, max(MaxFlips, Flips), Checksum + Sum)
+    end.
 
-find([H | _T], Element, Index) when H == Element ->
-    Index;
-find([_H | T], Element, Index) ->
-    find(T, Element, Index + 1).
+work(_P, _L, Index, Index, _R, MaxFlips, Checksum, Target) ->
+    Target ! {MaxFlips, Checksum};
+work(Proc, List, Index, MaxIndex, R, MaxFlips, Checksum, Target) ->
+    reset(R),
+    {Flips, Sum} = flip_sum(Index, List),
+    NewFlips = max(Flips, MaxFlips),
+    NewSum = Checksum + Sum,
+    {NewList, NewR} = next(Proc, List, 1),
+    work(Proc, NewList, Index + 1, MaxIndex, NewR, NewFlips, NewSum, Target).
 
-% Generates all permutations of the list.
-perms(List) ->
-    perms(List, []).
+next(Proc, List, R) ->
+    NewList = next_aux(R, List),
+    case put(R, get(R) - 1) of
+	1 -> next(Proc, NewList, R + 1);
+	_Other -> {NewList, R}
+    end.
 
-perms([], Acc) ->
-    [Acc];
-perms(List, Acc) ->
-    lists:flatmap(
-        fun (E) ->
-            perms(lists:delete(E, List), [E | Acc])
-        end, List).
+next_aux(1, [E1, E2|T]) -> [E2, E1|T];
+next_aux(2, [E1, E2, E3|T]) -> [E2, E3, E1|T];
+next_aux(3, [E1, E2, E3, E4|T]) -> [E2, E3, E4, E1|T];
+next_aux(R, [H|T]) ->
+    {Front, Back} = lists:split(R, T),
+    Front ++ [H] ++ Back.    
 
-% Main entry point to run fannkuch_redux with N=12.
-main() ->
-    N = 12,
-    Result = fannkuch_redux(N),
-    io:format("Fannkuch redux number for ~p is ~p.~n", [N, Result]).
+flip_sum(Index, List) ->
+    Flips = flip(List, 0),
+    Sum = 
+	case Index band 1 of
+	    0 -> Flips;
+	    1 -> -Flips
+	end,
+    {Flips, Sum}.
+
+flip([1|_T], N) ->
+    N;
+flip([2, E1|T], N) ->
+    flip([E1, 2|T], N + 1);
+flip([3, E1, E2|T], N) ->
+    flip([E2, E1, 3|T], N + 1);
+flip([4, E1, E2, E3|T], N) ->
+    flip([E3, E2, E1, 4|T], N + 1);
+flip([5, E1, E2, E3, E4|T], N) ->
+    flip([E4, E3, E2, E1, 5|T], N + 1);
+flip([6, E1, E2, E3, E4, E5|T], N) ->
+    flip([E5, E4, E3, E2, E1, 6|T], N + 1);
+flip([7, E1, E2, E3, E4, E5, E6|T], N) ->
+    flip([E6, E5, E4, E3, E2, E1, 7|T], N + 1);
+flip([8, E1, E2, E3, E4, E5, E6, E7|T], N) ->
+    flip([E7, E6, E5, E4, E3, E2, E1, 8|T], N + 1);
+flip([9, E1, E2, E3, E4, E5, E6, E7, E8|T], N) ->
+    flip([E8, E7, E6, E5, E4, E3, E2, E1, 9|T], N + 1);
+flip([10, E1, E2, E3, E4, E5, E6, E7, E8, E9|T], N) ->
+    flip([E9, E8, E7, E6, E5, E4, E3, E2, E1, 10|T], N + 1);
+flip([11, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10|T], N) ->
+    flip([E10, E9, E8, E7, E6, E5, E4, E3, E2, E1, 11|T], N + 1);
+flip([12, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11|T], N) ->
+    flip([E11, E10, E9, E8, E7, E6, E5, E4, E3, E2, E1, 12|T], N + 1);
+flip([H|_T] = List, N) ->
+    {First, Last} = lists:split(H, List),
+    flip(lists:reverse(First) ++ Last, N + 1).
+
+reset(1) -> ok;    
+reset(N) -> put(N - 1, N), reset(N - 1).
+
+fact(1) -> 1;
+fact(N) -> N * fact(N - 1).

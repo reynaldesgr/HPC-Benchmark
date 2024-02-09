@@ -15,7 +15,7 @@ cd - > /dev/null
 cd "${base_path}erlang/fannkuch-redux"
 erlc fannkuch.erl
 echo "[Fannkuch redux] - run Erlang file..."
-time erl -noshell -s fannkuch main -s init stop
+time erl -noshell -run fannkuch main 12
 cd - > /dev/null
 echo -e "\n\n"
 
