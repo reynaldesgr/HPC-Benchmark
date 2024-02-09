@@ -85,3 +85,4 @@ mk_list([{B, P}|T], AccP, AccL)->
 
 print(List) -> port_command(get(port), List).
 reverse_print(List) -> port_command(get(port), lists:reverse(List)).
+    

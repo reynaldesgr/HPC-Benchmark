@@ -3,7 +3,7 @@ import subprocess
 import time
 import psutil
 
-def run_program(command, output_path="program_output.txt", timeout=3600):
+def run_program(command, output_path="program_output.txt", timeout=3600000):
     """Executes the command and redirects the output to a file while monitoring CPU time and memory usage."""
     with open(output_path, "w") as output_file:
         start = time.time()

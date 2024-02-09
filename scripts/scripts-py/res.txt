@@ -1,5 +1,17 @@
 Binary-Trees
-C : 
-Erlang : 
-Python :
-Rust :
+C : Time: 5.00 sec, CPU Time: 4.82 sec, Memory: 132044.0 KB
+Erlang : Time: 7.01 sec, CPU Time: 9.22 sec, Memory: 1089692.0 KB
+Python : Time: 37.02 sec, CPU Time: 36.86 sec, Memory: 518392.0 KB
+Rust : Time: 15.01 sec, CPU Time: 14.15 sec, Memory: 132804.0 KB
+
+Fannkuch Redux
+C : Time: 73.03 sec, CPU Time: 72.49 sec, Memory: 940.0 KB
+Erlang :
+Python : Time: 14.00 sec, CPU Time: 0.33 sec, Memory: 13912.0 KB
+Rust : Time: 141.06 sec, CPU Time: 140.66 sec, Memory: 920.0 KB
+
+Fasta
+C : Time: 2.00 sec, CPU Time: 1.13 sec, Memory: 1312.0 KB
+Erlang : Time: 18.01 sec, CPU Time: 28.67 sec, Memory: 143724.0 KB
+Python : Time: 44.02 sec, CPU Time: 43.94 sec, Memory: 8440.0 KB
+Rust : Time: 47.02 sec, CPU Time: 46.52 sec, Memory: 1212.0 KB
