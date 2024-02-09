@@ -6,7 +6,7 @@ Rust : Time: 15.01 sec, CPU Time: 14.15 sec, Memory: 132804.0 KB
 
 Fannkuch Redux
 C : Time: 73.03 sec, CPU Time: 72.49 sec, Memory: 940.0 KB
-Erlang :
+Erlang : Time: 550.35 sec, CPU Time: 561.12 sec, Memory: 63336664.0 KB
 Python : Time: 14.00 sec, CPU Time: 0.33 sec, Memory: 13912.0 KB
 Rust : Time: 141.06 sec, CPU Time: 140.66 sec, Memory: 920.0 KB
 
