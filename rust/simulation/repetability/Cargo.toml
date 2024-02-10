@@ -1,0 +1,11 @@
+[package]
+name = "forest_fire"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+rand_mt = "4.2.2"
+
+[[bin]] 
+name = "forest_fire"
+path = "src/fire-64.rs"
