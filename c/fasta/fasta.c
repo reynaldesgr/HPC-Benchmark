@@ -76,15 +76,15 @@ static void repeat_fasta(const char *seq,
   }
 
   int whole_buffers = n / (len*LINELEN);
-  for (i=0; i< whole_buffers; i++)  //write(1, buffer2, buflen2);
+  for (i=0; i< whole_buffers; i++)  write(1, buffer2, buflen2);
 
   int data_remaining = n - whole_buffers * len * LINELEN;
   int embedded_newlines = data_remaining / LINELEN;
-  //write(1, buffer2, data_remaining + embedded_newlines);
+  write(1, buffer2, data_remaining + embedded_newlines);
 
   free(buffer1);
   free(buffer2);
-  if (n % LINELEN != 0) //write(1, "\n", 1);
+  if (n % LINELEN != 0) write(1, "\n", 1);
 }
 
 static char * build_hash(const char *symb,const float *probability) {
