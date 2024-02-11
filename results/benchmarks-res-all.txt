@@ -18,6 +18,16 @@ Python : Time: 410.18 sec, CPU Time: 409.57 sec, Memory: 88164.0 KB
 Ruby : Time: 621.27 sec, CPU Time: 621.05 sec, Memory: 15624.0 KB
 Rust : Time: 422.19 sec, CPU Time: 421.99 sec, Memory: 3244.0 KB
 
+Recursion (Fibonacci)
+C : Time: 9.00 sec, CPU Time: 8.57 sec, Memory: 904.0 KB
+C ++ : Time: 9.00 sec, CPU Time: 8.38 sec, Memory: 1900.0 KB
+Erlang : Time: 16.01 sec, CPU Time: 18.85 sec, Memory: 144356.0 KB
+Fortran : Time: 10.01 sec, CPU Time: 9.98 sec, Memory: 1376.0 KB
+Java : Time: 5.00 sec, CPU Time: 4.36 sec, Memory: 54392.0 KB
+Python : Time: 168.07 sec, CPU Time: 167.94 sec, Memory: 7956.0 KB
+Ruby : Time: 110.04 sec, CPU Time: 109.39 sec, Memory: 13808.0 KB
+Rust : Time: 13.01 sec, CPU Time: 12.60 sec, Memory: 988.0 KB
+
 Fannkuch Redux
 C : Time: 73.03 sec, CPU Time: 72.49 sec, Memory: 940.0 KB
 Erlang : Time: 28.01 sec, CPU Time: 248.05 sec, Memory: 150060.0 KB
