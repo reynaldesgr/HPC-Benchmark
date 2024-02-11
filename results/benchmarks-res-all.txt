@@ -9,14 +9,14 @@ Ruby : Time: 29.02 sec, CPU Time: 28.59 sec, Memory: 405064.0 KB
 Rust : Time: 15.01 sec, CPU Time: 14.15 sec, Memory: 132804.0 KB
 
 Sort
-C :
-C++ :
-Erlang :
-Fortran :
-Java :
-Python :
-Ruby :
-Rust : 
+C : Time: 31.01 sec, CPU Time: 30.29 sec, Memory: 1264.0 KB
+C++ : Time: 64.03 sec, CPU Time: 63.70 sec, Memory: 4040.0 KB
+Erlang : Time: 23.01 sec, CPU Time: 46.32 sec, Memory: 190388.0 KB
+Fortran : Time: 27.01 sec, CPU Time: 26.55 sec, Memory: 2408.0 KB
+Java : Time: 16.01 sec, CPU Time: 16.63 sec, Memory: 168268.0 KB
+Python : Time: 410.18 sec, CPU Time: 409.57 sec, Memory: 88164.0 KB
+Ruby : Time: 621.27 sec, CPU Time: 621.05 sec, Memory: 15624.0 KB
+Rust : Time: 422.19 sec, CPU Time: 421.99 sec, Memory: 3244.0 KB
 
 Fannkuch Redux
 C : Time: 73.03 sec, CPU Time: 72.49 sec, Memory: 940.0 KB
