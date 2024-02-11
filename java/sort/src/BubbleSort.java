@@ -6,7 +6,7 @@ public class BubbleSort {
     
     
     public static void main(String[] args) {
-        String filePath = "../../TESTS/arrays/tab.txt";
+        String filePath = "../../tests/arrays/tab.txt";
         int[] arr = new int[100000]; // Création d'un tableau pour stocker 100 000 entiers
         int index = 0;
 
