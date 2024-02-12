@@ -2,12 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N 500 // Taille des matrices
-
+#define N 500 
 void fillMatrix(int matrix[N][N]) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            matrix[i][j] = rand() % 100; // Remplir avec des nombres aléatoires entre 0 et 99
+            matrix[i][j] = rand() % 100; 
         }
     }
 }

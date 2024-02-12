@@ -1,11 +1,20 @@
 -module(matrix).
 -export([multiply/2]).
 
-multiply(MatrixA, MatrixB) ->
-    lists:map(fun(RowA) ->
-        lists:map(fun(ColumnB) ->
-            lists:sum(lists:zipwith(fun(X, Y) -> X * Y end, RowA, ColumnB))
-        end, transpose(MatrixB))
-    end, MatrixA).
+multiply(A, B) ->
+    lists:map(fun(Row) -> multiply_row(Row, B) end, A).
 
-transpose(Matrix) -> lists:zip(Matrix).
+multiply_row(Row, B) ->
+    lists:map(fun(BCol) -> dot_product(Row, BCol) end, transpose(B)).
+
+dot_product(Row, Col) ->
+    lists:sum([X*Y || {X, Y} <- lists:zip(Row, Col)]).
+
+transpose([H|T]) ->
+    transpose(H, T, []).
+
+transpose([], _, Transposed) ->
+    Transposed;
+transpose([_|Rest], Matrix, Acc) ->
+    {Heads, Tails} = lists:unzip([lists:split(1, Row) || Row <- Matrix]),
+    transpose(Rest, Tails, [Heads|Acc]).
