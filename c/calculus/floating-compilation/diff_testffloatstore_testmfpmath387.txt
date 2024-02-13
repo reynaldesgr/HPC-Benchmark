@@ -1,0 +1,14 @@
+4c4
+< Subtraction, Addition, Multiplication: 2153457254400.000000
+---
+> Subtraction, Addition, Multiplication: 2153457385472.000000
+10c10
+< Division of (a + b) by (a - b): -1.021854
+---
+> Division of (a + b) by (a - b): -1.021855
+12,13c12,13
+< Division of (a * b) by (a + b): 150936.984375
+< Division of (a * b) by (a - b): -154235.609375
+---
+> Division of (a * b) by (a + b): 150936.968750
+> Division of (a * b) by (a - b): -154235.625000

@@ -1,0 +1,1 @@
+{"init terminating in do_boot",{function_clause,[{lists,zip,[[4.900000e-01],[]],[{file,"lists.erl"},{line,391}]},{lists,zip,2,[{file,"lists.erl"},{line,391}]},{matrix,dot_product,2,[{file,"matrix.erl"},{line,11}]},{lists,map,2,[{file,"lists.erl"},{line,1243}]},{init,start_em,1,[]},{init,do_boot,3,[]}]}}
