@@ -53,7 +53,7 @@ case $language in
       interpreter="python3"
     elif [ "$language" = "java" ]; then
       javac -d bin -sourcepath src ../../java/calculus/src/Matrix.java
-      executable_path="../../../java/calculus/bin Matrix"
+      executable_path="../../java/calculus/bin Matrix"
     elif [ "$language" = "erlang" ]; then
       interpreter="erl -noshell -s matrix main -s init stop"
     fi

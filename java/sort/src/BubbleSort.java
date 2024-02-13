@@ -7,33 +7,25 @@ public class BubbleSort {
     
     public static void main(String[] args) {
         String filePath = "../../tests/arrays/tab.txt";
-        int[] arr = new int[100000]; // Création d'un tableau pour stocker 100 000 entiers
+        int[] arr = new int[100000];
         int index = 0;
 
 
         try {
             File file = new File(filePath);
-            // Utilisez le Scanner avec un délimiteur qui reconnaît les virgules et les espaces blancs
             Scanner scanner = new Scanner(file).useDelimiter(",\\s*");
             
             while (scanner.hasNextInt() && index < arr.length) {
                 arr[index++] = scanner.nextInt();
             }
             scanner.close();
-
-            // Affiche le nombre d'entiers lus pour vérification
-            System.out.println("Nombre d'entiers lus : " + index);
         } catch (FileNotFoundException e) {
-            System.err.println("Le fichier n'a pas été trouvé.");
             e.printStackTrace();
         } catch (Exception e) {
-            System.err.println("Une erreur est survenue lors de la lecture du fichier.");
             e.printStackTrace();
         }
 
         bubbleSort(arr);
-        //System.out.println("Sorted array:");
-        //printArray(arr);
     }
 
     static void bubbleSort(int[] arr) {
