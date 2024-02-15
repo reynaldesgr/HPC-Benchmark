@@ -21,7 +21,7 @@ if (len(sys.argv) > 2):
     executable_args = [arg for arg in sys.argv[3:] if is_integer(arg)]
 
 output_dir          = os.path.dirname(os.path.abspath(source_file))
-output_file_path    = os.path.join(output_dir, "execution_results.txt")
+output_file_path    = os.path.join(output_dir, "execution_results.csv")
 source_dir          = os.path.dirname(os.path.abspath(source_file))
 root_dir            = os.path.dirname(source_dir)
 bin_dir             = os.path.join(root_dir, "bin")

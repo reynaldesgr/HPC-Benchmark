@@ -23,8 +23,8 @@ impl TreeNode {
 }
 
 fn main() {
-    for _ in 0..21 {
-        let depth = 22;
+    for _ in 0..45 {
+        let depth = 45;
         let tree = TreeNode::make_tree(depth);
         let total_nodes = TreeNode::check_tree(&tree);
         println!("Tree of depth {} has {} nodes.", depth, total_nodes);

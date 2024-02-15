@@ -33,8 +33,8 @@ void free_tree(TreeNode* node) {
 }
 
 int main() {
-    for (int i = 0; i < 21; i++) {
-        int depth = 22;
+    for (int i = 0; i < 45; i++) {
+        int depth = 45;
         TreeNode* tree = make_tree(depth);
         int total_nodes = check_tree(tree);
         printf("Tree of depth %d has %d nodes.\n", depth, total_nodes);

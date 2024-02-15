@@ -30,8 +30,8 @@ int check_tree(TreeNode* node) {
 }
 
 int main() {
-    for (int i = 0; i < 21; i++) {
-        int depth = 22;
+    for (int i = 0; i < 45; i++) {
+        int depth = 45;
         TreeNode* tree = make_tree(depth);
         int total_nodes = check_tree(tree);
         std::cout << "Tree of depth " << depth << " has " << total_nodes << " nodes." << std::endl;

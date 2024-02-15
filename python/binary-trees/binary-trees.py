@@ -28,8 +28,8 @@ def main():
     """
     Main function to drive the tree creation and checking for 21 trees.
     """
-    for _ in range(21):
-        depth = 22
+    for _ in range(45):
+        depth = 45
         tree = make_tree(depth)
         total_nodes = check_tree(tree)
         print(f'Tree of depth {depth} has {total_nodes} nodes.')

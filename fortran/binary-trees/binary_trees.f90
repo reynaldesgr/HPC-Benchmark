@@ -9,8 +9,8 @@ program binary_trees
     type(TreeNode), pointer :: tree
     integer :: i, total_nodes, depth
 
-    depth = 22
-    do i = 0, 20
+    depth = 45
+    do i = 0, 45
         tree => make_tree(depth)
         total_nodes = check_tree(tree)
         print *, "Tree of depth ", depth, " has ", total_nodes, " nodes."

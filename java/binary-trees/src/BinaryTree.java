@@ -24,8 +24,8 @@ public class BinaryTree {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 21; i++) {
-            int depth = 22;
+        for (int i = 0; i < 45; i++) {
+            int depth = 45;
             TreeNode tree = makeTree(depth);
             int totalNodes = checkTree(tree);
             System.out.println("Tree of depth " + depth + " has " + totalNodes + " nodes.");
