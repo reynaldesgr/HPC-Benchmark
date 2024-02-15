@@ -1,0 +1,2 @@
+User Time (s), System Time (s), Real Time (s), Executable Size (KB)
+4.49, 0.08, 4.57, 16.52 
