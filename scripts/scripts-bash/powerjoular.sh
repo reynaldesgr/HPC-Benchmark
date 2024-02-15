@@ -71,15 +71,15 @@ compile_and_run() {
     
     for i in {1..30}
     do
-        echo "[Measure] - PowerJoular executing..."
+        echo "[Measure $i] - PowerJoular executing..."
         $PROGRAM &
         
         PROGRAM_PID=$!          
         
-        powerjoular -p $PROGRAM_PID >> power_results.txt &
+        sudo powerjoular -p $PROGRAM_PID >> $SOURCE_PATH/power_results.txt &
         POWERJOULAR_PID=$!
 
-        sleep 20
+        sleep 60
 
         kill -INT $POWERJOULAR_PID
         echo "[Measure] - Done."
@@ -88,4 +88,4 @@ compile_and_run() {
 }
 
 compile_and_run $LANGUAGE $SOURCE_PATH "$@"
-rm $PROGRAM
+rm exec
