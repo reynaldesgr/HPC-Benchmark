@@ -166,14 +166,14 @@ int main(int argc, char **argv) {
   int n=1000;
   if (argc>1) n = atoi(argv[1]);
 
-  //write(1, header1, sizeof(header1)-1);
-  //repeat_fasta(alu, n*2);
+  write(1, header1, sizeof(header1)-1);
+  repeat_fasta(alu, n*2);
 
-  //write(1, header2, sizeof(header2)-1);
-  //random_fasta(iub, iub_p, n*3);
+  write(1, header2, sizeof(header2)-1);
+  random_fasta(iub, iub_p, n*3);
 
-  //write(1, header3, sizeof(header3)-1);
-  //random_fasta(homosapiens, homosapiens_p, n*5);
+  write(1, header3, sizeof(header3)-1);
+  random_fasta(homosapiens, homosapiens_p, n*5);
 
   return 0;
 }
