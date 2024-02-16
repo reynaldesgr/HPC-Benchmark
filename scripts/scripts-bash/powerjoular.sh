@@ -81,9 +81,9 @@ compile_and_run() {
 
         sleep 60
 
-        kill -9 $POWERJOULAR_PID
+        kill -INT $POWERJOULAR_PID
         echo "[Measure] - Done."
-        kill -9 $PROGRAM_PID
+        kill -INT $PROGRAM_PID
     done
 }
 
