@@ -81,11 +81,13 @@ compile_and_run() {
 
         sleep 60
 
-        kill -INT $POWERJOULAR_PID
+        kill -9 $POWERJOULAR_PID
         echo "[Measure] - Done."
-        kill -INT $PROGRAM_PID
+        kill -9 $PROGRAM_PID
     done
 }
 
 compile_and_run $LANGUAGE $SOURCE_PATH "$@"
-rm exec
+if [-f exec]; then
+    rm exec
+fi
