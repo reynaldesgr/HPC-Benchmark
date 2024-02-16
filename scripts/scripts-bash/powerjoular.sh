@@ -76,7 +76,7 @@ compile_and_run() {
         
         PROGRAM_PID=$!          
         
-        sudo powerjoular -p $PROGRAM_PID >> $SOURCE_PATH/power_results.txt &
+        sudo powerjoular -p $PROGRAM_PID >> $LANGUAGE-power_results.txt &
         POWERJOULAR_PID=$!
 
         sleep 60
