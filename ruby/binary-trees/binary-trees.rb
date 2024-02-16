@@ -21,8 +21,8 @@ class TreeNode
     1 + check_tree(node.left) + check_tree(node.right)
   end
   
-  (0..30).each do |i|
-    depth = 30
+  (0..25).each do |i|
+    depth = 25
     tree = make_tree(depth)
     total_nodes = check_tree(tree)
     puts "Tree of depth #{depth} has #{total_nodes} nodes."

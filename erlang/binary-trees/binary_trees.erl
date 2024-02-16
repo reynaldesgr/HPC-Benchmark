@@ -16,8 +16,8 @@ check_tree(#tree{left = Left, right = Right}) ->
     1 + check_tree(Left) + check_tree(Right).
 
 main() ->
-    N = 30,
-    Depth = 30,
+    N = 25,
+    Depth = 25,
     lists:foreach(
         fun(_) ->
             Tree = make_tree(Depth),
