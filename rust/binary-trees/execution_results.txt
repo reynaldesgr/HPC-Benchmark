@@ -1,1 +1,0 @@
-User Time (s), System Time (s), Real Time (s), Executable Size (KB)

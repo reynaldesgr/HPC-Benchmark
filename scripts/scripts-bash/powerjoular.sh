@@ -8,6 +8,9 @@ BIN_DIR=$3       # Binary directory for Java compilation output
 SOURCE_DIR=$4    # Source directory for Java source files
 shift 4
 
+FILE_NAME=$(basename "${SOURCE_PATH%.*}")
+RESULTS_FILE="${LANGUAGE}-power_results-${FILE_NAME}.txt"
+
 compile_and_run() {
     case $1 in
         C)
@@ -76,7 +79,7 @@ compile_and_run() {
         
         PROGRAM_PID=$!          
         
-        sudo powerjoular -p $PROGRAM_PID >> $LANGUAGE-power_results.txt &
+        sudo powerjoular -p $PROGRAM_PID >> $RESULTS_FILE &
         POWERJOULAR_PID=$!
 
         sleep 60

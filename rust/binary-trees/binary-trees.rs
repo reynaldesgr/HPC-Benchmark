@@ -1,10 +1,11 @@
-struct TreeNode {
+struct TreeNode 
+{
     left: Option<Box<TreeNode>>,
     right: Option<Box<TreeNode>>,
 }
 
 impl TreeNode {
-    fn make_tree(depth: i32) -> Option<Box<TreeNode>> {
+    fn make_tree(depth: u32) -> Option<Box<TreeNode>> {
         if depth > 0 {
             let left = TreeNode::make_tree(depth - 1);
             let right = TreeNode::make_tree(depth - 1);
@@ -14,7 +15,7 @@ impl TreeNode {
         }
     }
 
-    fn check_tree(node: &Option<Box<TreeNode>>) -> i32 {
+    fn check_tree(node: &Option<Box<TreeNode>>) -> u32 {
         match node {
             None => 0,
             Some(n) => 1 + TreeNode::check_tree(&n.left) + TreeNode::check_tree(&n.right),
