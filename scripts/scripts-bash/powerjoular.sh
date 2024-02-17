@@ -12,6 +12,7 @@ FILE_NAME=$(basename "${SOURCE_PATH%.*}")
 RESULTS_FILE="${LANGUAGE}-power_results-${FILE_NAME}.txt"
 
 compile_and_run() {
+    echo $@
     case $1 in
         c)
             gcc "$2" -o exec

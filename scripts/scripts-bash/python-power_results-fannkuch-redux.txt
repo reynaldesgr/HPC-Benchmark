@@ -1,0 +1,10 @@
+Error reading /proc/3746/stat file
+Error reading /proc/4130/stat file
+Error reading /proc/4164/stat file
+Error reading /proc/4221/stat file
+
+--------------------------
+Total energy: 0.00 Joules, including:
+	CPU energy: 0.00 Joules
+	GPU energy: 0.00 Joules
+--------------------------
