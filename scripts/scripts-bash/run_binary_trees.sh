@@ -44,7 +44,7 @@ echo -e "\n\n"
 
 cd "${base_path}python/binary-trees"
 echo "[Binary trees] - run Python file..."
-time python3 binary-trees.py
+time python3 binary-trees.py 12
 cd - > /dev/null
 echo -e "\n\n"
 
