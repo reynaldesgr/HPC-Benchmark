@@ -1,0 +1,9 @@
+n = 2
+real    0m32.736s
+user    0m24.552s
+sys     0m5.624s
+
+n = 26
+real    0m51.382s
+user    0m46.727s
+sys     0m0.702s

@@ -1,5 +1,5 @@
 // Cadeau. Codé par Thomas TAMAGNAUD pour Antoine VITON et Reynalde SEGERIE 
-const DEPTH : u32 = 25;
+const DEPTH : u32 = 26;
 const REPETITION : u32 = 30;
 
 pub mod pool;
@@ -90,8 +90,8 @@ fn main()
     }
 }
 
+/*
 
-/* 
 struct TreeNode {
     left: Option<Box<TreeNode>>,
     right: Option<Box<TreeNode>>,
