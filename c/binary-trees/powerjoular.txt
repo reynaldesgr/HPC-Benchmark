@@ -179,3 +179,5 @@ Total energy: 2702.07 Joules, including:
         CPU energy: 2702.07 Joules
         GPU energy: 0.00 Joules
 --------------------------
+
+Average : 2727.24 J/min

@@ -10,33 +10,22 @@ shift 4
 
 FILE_NAME=$(basename "${SOURCE_PATH%.*}")
 RESULTS_FILE="${LANGUAGE}-power_results-${FILE_NAME}.txt"
+DIRPATH=$(dirname "$SOURCE_PATH")
 
 compile_and_run() {
     echo $@
     case $1 in
         c)
             gcc "$2" -o exec
-            if [[ -n "$@" ]]; then
-                PROGRAM="./exec $@"
-            else
-                PROGRAM="./exec"
-            fi
+            PROGRAM="./exec"
             ;;
         c++)
             g++ "$2" -o exec
-            if [[ -n "$@" ]]; then
-                PROGRAM="./exec $@"
-            else
-                PROGRAM="./exec"
-            fi
+            PROGRAM="./exec"
             ;;
         fortran)
             gfortran "$2" -o exec
-            if [[ -n "$@" ]]; then
-                PROGRAM="./exec $@"
-            else
-                PROGRAM="./exec"
-            fi
+            PROGRAM="./exec"
             ;;
         java)
             javac -d "$BIN_DIR" -sourcepath "$SOURCE_DIR" "$2"
@@ -45,56 +34,41 @@ compile_and_run() {
             ;;
         rust)
             rustc "$2" -o exec
-            if [[ -n "$@" ]]; then
-                PROGRAM="./exec $@"
-            else
-                PROGRAM="./exec"
-            fi
+            PROGRAM="./exec"
             ;;
         erlang)
-            erlc "$2"
+            cd $DIRPATH
+            erlc "$FILE_NAME.erl"
             executable_name="${2%.*}"
-            if [[ -n "$@" ]]; then
-                PROGRAM="erl -noshell -run ${executable_name} main $@"
-            else
-                PROGRAM="erl -noshell -s ${executable_name} main -s init stop"
-            fi
+            PROGRAM="erl -noshell -s $FILE_NAME main -s init stop"
             ;;
         python)
-            if [[ -n "$@" ]]; then 
-                PROGRAM="python3 $2 $@"
-            else
-                PROGRAM="python3 $2"
-            fi
+            PROGRAM="python3 $2"
             ;;
         ruby)
-            if [[ -n "$@" ]]; then 
-                PROGRAM="ruby $2 $@"
-            else
-                PROGRAM="ruby $2"
-            fi
+            PROGRAM="ruby $2"
             ;;
         *)
             echo "Unsupported language: $1"
             exit 1
             ;;
     esac
-    
+
     for i in {1..30}
     do
         echo "[Measure $i] - PowerJoular executing..."
         $PROGRAM &
-        
+
         PROGRAM_PID=$!
-        
+
         sudo powerjoular -p $PROGRAM_PID >> "$RESULTS_FILE" &
         POWERJOULAR_PID=$!
 
-        sleep 60
+        sleep 25
 
         kill -INT $POWERJOULAR_PID
         echo "[Measure] - Done."
-        kill -INT $PROGRAM_PID
+        kill -9 $PROGRAM_PID
     done
 }
 

@@ -127,11 +127,6 @@ int main(int argc, char** argv)
 {
    int n = 12;
    if(argc > 1)n = atoi(argv[1]);
-   if(n < 3 || n > 12)
-   {
-      printf("n should be between [3 and 12]\n");
-      return 0;
-   }
    Result r = fannkuch(n);
    printf("%d\nPfannkuchen(%d) = %d\n",r.checksum,n,r.maxflips);
 }

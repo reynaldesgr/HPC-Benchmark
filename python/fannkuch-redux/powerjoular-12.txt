@@ -1,3 +1,5 @@
+time : 60s
+input : 12
 --------------------------
 Total energy: 2699.80 Joules, including:
         CPU energy: 2699.80 Joules
