@@ -1,0 +1,1 @@
+/home/reydvz/HPC-Benchmark/rust/binary-trees-memory/target/release/binary_tree: /home/reydvz/HPC-Benchmark/rust/binary-trees-memory/src/main.rs /home/reydvz/HPC-Benchmark/rust/binary-trees-memory/src/pool.rs
