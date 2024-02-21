@@ -37,16 +37,27 @@ def run_program(command, output_path="program_output.txt", timeout=3600000):
             "memory_usage": max_memory_usage
         }
 
-def main(command):
-    """Executes the command and measures performance."""
-    output_path = "output.txt"
-    result = run_program(command, output_path, timeout=120)
+def main(command, repetitions=30):
+    """Executes the command for multiple repetitions and calculates the average performance."""
+    total_time = 0
+    total_cpu_time = 0
+    total_memory_usage = 0
 
-    if result:
-        print(f"Output generated in {output_path}.")
-        print(f"Time: {result['time_taken']:.2f} sec, CPU Time: {result['cpu_time']:.2f} sec, Memory: {result['memory_usage']} KB")
-    else:
-        print("Program did not complete successfully or timed out.")
+    for _ in range(repetitions):
+        result = run_program(command, timeout=120)
+
+        if result:
+            total_time += result['time_taken']
+            total_cpu_time += result['cpu_time']
+            total_memory_usage += result['memory_usage']
+
+    average_time = total_time / repetitions
+    average_cpu_time = total_cpu_time / repetitions
+    average_memory_usage = total_memory_usage / repetitions
+
+    print(f"Average time: {average_time:.2f} sec")
+    print(f"Average CPU time: {average_cpu_time:.2f} sec")
+    print(f"Average memory usage: {average_memory_usage} KB")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run a command and check its performance.")

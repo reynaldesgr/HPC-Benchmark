@@ -20,6 +20,17 @@ Double multiplication: Result = 9.740893, Time = 2.767900 seconds
 Double addition: Result = 9.124691, Time = 2.684509 seconds
 Double division: Result = 0.156470, Time = 2.676056 seconds
 
+Ruby
+Benchmarking float (32-bit) operations:
+Float multiplication: Result = 9.740885481741, Time = 5.547543025 seconds
+Float addition: Result = 9.12469, Time = 5.513091274 seconds
+Float division: Result = 0.1564699308236386, Time = 5.715770125 seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result = 9.7408930688616, Time = 6.088837206 seconds
+Double addition: Result = 9.124691346912467, Time = 5.45722378 seconds
+Double division: Result = 0.15647003457989989, Time = 5.344940616 seconds
+
 Rust
 Benchmarking float (32-bit) operations:
 Float multiplication: Time = 0.336470 seconds, Result = 9.740886
