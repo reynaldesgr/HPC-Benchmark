@@ -1,0 +1,23 @@
+benchmark    : binary-trees
+replications : 30
+
+C
+input : 27
+time : 60
+average conso. : 2727.24 J 
+
+C++
+input : 27
+time : 60
+average conso. : 2723.23 J 
+
+Erlang
+input : 30
+time : 60
+average conso. : 2578.87 J 
+
+Fortran
+Java
+Python
+Ruby
+Rust

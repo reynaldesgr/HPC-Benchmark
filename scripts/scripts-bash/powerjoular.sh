@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Usage: ./script.sh <language> <source_path> [bin_dir] [source_dir] [args...]
+# No args allowed
 
 LANGUAGE=$1
 SOURCE_PATH=$2

@@ -2,12 +2,10 @@
 
 -compile([native, {hipe, [o3]}]).
 
--export([main/1]).
+-export([main/0]).
 
-main([Arg]) ->
-    main(list_to_integer(Arg)),
-    halt(0);
-main(N) when N > 0 ->
+main()  ->
+    N = 12,
     {MaxFlips, Checksum} = 
 	case N of
 	    1 -> {0, 0};
