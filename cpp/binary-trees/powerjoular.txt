@@ -1,183 +1,186 @@
-time : 60s
-input : 27
+PID monitoring: CPU: 0.49 % (0.47 %)    48.20 Watts (45.81 Watts)
 --------------------------
-Total energy: 2653.75 Joules, including:
-        CPU energy: 2653.75 Joules
+Total energy: 2609.91 Joules, including:
+        CPU energy: 2609.91 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    63.79 Watts (61.23 Watts)
 --------------------------
-Total energy: 2707.93 Joules, including:
-        CPU energy: 2707.93 Joules
+Total energy: 3459.18 Joules, including:
+        CPU energy: 3459.18 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    47.71 Watts (45.80 Watts)
 --------------------------
-Total energy: 2700.57 Joules, including:
-        CPU energy: 2700.57 Joules
+Total energy: 2726.41 Joules, including:
+        CPU energy: 2726.41 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    47.75 Watts (45.84 Watts)
 --------------------------
-Total energy: 2701.65 Joules, including:
-        CPU energy: 2701.65 Joules
+Total energy: 2703.38 Joules, including:
+        CPU energy: 2703.38 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    47.68 Watts (45.78 Watts)
 --------------------------
-Total energy: 2701.48 Joules, including:
-        CPU energy: 2701.48 Joules
+Total energy: 2703.97 Joules, including:
+        CPU energy: 2703.97 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.55 % (0.52 %)    48.22 Watts (45.83 Watts)
 --------------------------
-Total energy: 2700.41 Joules, including:
-        CPU energy: 2700.41 Joules
+Total energy: 2719.70 Joules, including:
+        CPU energy: 2719.70 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.55 % (0.52 %)    48.17 Watts (45.79 Watts)
 --------------------------
-Total energy: 2699.45 Joules, including:
-        CPU energy: 2699.45 Joules
+Total energy: 2701.77 Joules, including:
+        CPU energy: 2701.77 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    47.69 Watts (45.79 Watts)
 --------------------------
-Total energy: 2700.70 Joules, including:
-        CPU energy: 2700.70 Joules
+Total energy: 2701.06 Joules, including:
+        CPU energy: 2701.06 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.69 %)    35.38 Watts (45.74 Watts)
 --------------------------
-Total energy: 2701.17 Joules, including:
-        CPU energy: 2701.17 Joules
+Total energy: 2700.35 Joules, including:
+        CPU energy: 2700.35 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.55 % (0.52 %)    64.28 Watts (61.10 Watts)
 --------------------------
-Total energy: 2700.36 Joules, including:
-        CPU energy: 2700.36 Joules
+Total energy: 3456.07 Joules, including:
+        CPU energy: 3456.07 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.69 %)    35.72 Watts (45.73 Watts)
 --------------------------
-Total energy: 2700.91 Joules, including:
-        CPU energy: 2700.91 Joules
+Total energy: 2723.17 Joules, including:
+        CPU energy: 2723.17 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.69 %)    35.38 Watts (45.75 Watts)
 --------------------------
-Total energy: 2700.62 Joules, including:
-        CPU energy: 2700.62 Joules
+Total energy: 2708.23 Joules, including:
+        CPU energy: 2708.23 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    47.72 Watts (45.81 Watts)
 --------------------------
-Total energy: 2700.78 Joules, including:
-        CPU energy: 2700.78 Joules
+Total energy: 2701.62 Joules, including:
+        CPU energy: 2701.62 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
---------------------------
-Total energy: 2700.84 Joules, including:
-        CPU energy: 2700.84 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2701.29 Joules, including:
-        CPU energy: 2701.29 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
+PID monitoring: CPU: 0.54 % (0.52 %)    47.68 Watts (45.77 Watts)
 --------------------------
 Total energy: 2700.73 Joules, including:
         CPU energy: 2700.73 Joules
         GPU energy: 0.00 Joules
 --------------------------
-
+PID monitoring: CPU: 0.55 % (0.52 %)    48.15 Watts (45.77 Watts)
 --------------------------
-Total energy: 2701.05 Joules, including:
-        CPU energy: 2701.05 Joules
+Total energy: 2700.79 Joules, including:
+        CPU energy: 2700.79 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.65 Watts (45.74 Watts)
+--------------------------
+Total energy: 2702.22 Joules, including:
+        CPU energy: 2702.22 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.68 Watts (45.77 Watts)
+--------------------------
+Total energy: 2702.45 Joules, including:
+        CPU energy: 2702.45 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.71 Watts (45.80 Watts)
+--------------------------
+Total energy: 2702.23 Joules, including:
+        CPU energy: 2702.23 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.49 % (0.47 %)    47.72 Watts (45.81 Watts)
+--------------------------
+Total energy: 2702.10 Joules, including:
+        CPU energy: 2702.10 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.55 % (0.52 %)    48.21 Watts (45.82 Watts)
+--------------------------
+Total energy: 2702.31 Joules, including:
+        CPU energy: 2702.31 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.49 % (0.47 %)    47.68 Watts (45.77 Watts)
+--------------------------
+Total energy: 2719.68 Joules, including:
+        CPU energy: 2719.68 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.75 Watts (45.84 Watts)
+--------------------------
+Total energy: 2702.72 Joules, including:
+        CPU energy: 2702.72 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.48 % (0.47 %)    47.24 Watts (45.81 Watts)
+--------------------------
+Total energy: 2702.37 Joules, including:
+        CPU energy: 2702.37 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.24 Watts (45.81 Watts)
+--------------------------
+Total energy: 2717.30 Joules, including:
+        CPU energy: 2717.30 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.49 % (0.47 %)    48.24 Watts (45.85 Watts)
+--------------------------
+Total energy: 2703.10 Joules, including:
+        CPU energy: 2703.10 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.75 Watts (45.84 Watts)
+--------------------------
+Total energy: 2705.98 Joules, including:
+        CPU energy: 2705.98 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.48 % (0.63 %)    35.46 Watts (45.85 Watts)
+--------------------------
+Total energy: 2716.15 Joules, including:
+        CPU energy: 2716.15 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.74 Watts (45.83 Watts)
+--------------------------
+Total energy: 2704.05 Joules, including:
+        CPU energy: 2704.05 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.49 % (0.47 %)    47.77 Watts (45.86 Watts)
+--------------------------
+Total energy: 2703.75 Joules, including:
+        CPU energy: 2703.75 Joules
+        GPU energy: 0.00 Joules
+--------------------------
+PID monitoring: CPU: 0.54 % (0.52 %)    47.79 Watts (45.88 Watts)
+--------------------------
+Total energy: 2704.39 Joules, including:
+        CPU energy: 2704.39 Joules
         GPU energy: 0.00 Joules
 --------------------------
 
---------------------------
-Total energy: 2701.12 Joules, including:
-        CPU energy: 2701.12 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2701.48 Joules, including:
-        CPU energy: 2701.48 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2700.80 Joules, including:
-        CPU energy: 2700.80 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2701.38 Joules, including:
-        CPU energy: 2701.38 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2700.33 Joules, including:
-        CPU energy: 2700.33 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2699.73 Joules, including:
-        CPU energy: 2699.73 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2700.05 Joules, including:
-        CPU energy: 2700.05 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2700.55 Joules, including:
-        CPU energy: 2700.55 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2700.67 Joules, including:
-        CPU energy: 2700.67 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2700.88 Joules, including:
-        CPU energy: 2700.88 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 3412.92 Joules, including:
-        CPU energy: 3412.92 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2703.61 Joules, including:
-        CPU energy: 2703.61 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
---------------------------
-Total energy: 2699.67 Joules, including:
-        CPU energy: 2699.67 Joules
-        GPU energy: 0.00 Joules
---------------------------
-
-Average : 2723.23 J/min
+    Utilisation moyenne du CPU : 0.53 % (arrondi)
+    Puissance moyenne du CPU   : 47.22 Watts
+    Énergie totale moyenne     : 2755.35 Joules
+    Énergie maximale consommée : 3459.18 Joules
+    Énergie minimale consommée : 2609.91 Joules

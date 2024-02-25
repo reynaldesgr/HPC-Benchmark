@@ -17,7 +17,26 @@ time : 60
 average conso. : 2578.87 J 
 
 Fortran
+input :
+time :
+average conso. : 
+
 Java
+input : 
+time :
+average conso. :
+
 Python
+input : 
+time :
+average conso. :
+
 Ruby
+input :
+time : 
+average conso. :
+
 Rust
+input :
+time : 
+average conso. :

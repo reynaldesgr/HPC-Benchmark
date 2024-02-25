@@ -6,10 +6,9 @@ import psutil
 def run_program(command, output_path="program_output.txt", timeout=3600000):
     """Executes the command and redirects the output to a file while monitoring CPU time and memory usage."""
     with open(output_path, "w") as output_file:
-        start = time.time()
-        cpu_time = 0
+        start            = time.time()
+        cpu_time         = 0
         max_memory_usage = 0
-        
         process = subprocess.Popen(command, stdout=output_file, stderr=subprocess.STDOUT)
         ps_process = psutil.Process(process.pid)  # Wrap subprocess with psutil to monitor
 
@@ -18,19 +17,19 @@ def run_program(command, output_path="program_output.txt", timeout=3600000):
                 time.sleep(1)  # Sleep to prevent spamming CPU usage checks
                 cpu_times = ps_process.cpu_times()
                 cpu_time = cpu_times.user + cpu_times.system
-                current_memory_usage = ps_process.memory_info().rss / 1024  # Convert to KB
+                current_memory_usage = (ps_process.memory_info().rss / 1024 )/ 1024  # Convert to KB
                 if current_memory_usage > max_memory_usage:
                     max_memory_usage = current_memory_usage
-
-                if time.time() - start > timeout:
-                    ps_process.kill()
-                    raise subprocess.TimeoutExpired(command, timeout)
+                #sec+=1
 
             end = time.time()
+            #if (sec >=  120):
+            #   process.terminate() 
+
         except subprocess.TimeoutExpired:
             print(f"Timeout expired. Program was killed after {timeout} seconds.")
             return None
-
+        
         return {
             "time_taken": end - start,
             "cpu_time": cpu_time,

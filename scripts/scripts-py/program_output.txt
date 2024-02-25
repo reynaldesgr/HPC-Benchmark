@@ -1,25 +1,30 @@
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
-Tree of depth 25 has 33554431 nodes.
+../../ruby/binary-trees/binary-trees.rb:7:in `initialize': Interrupt
+	from ../../ruby/binary-trees/binary-trees.rb:12:in `new'
+	from ../../ruby/binary-trees/binary-trees.rb:12:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:15:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:14:in `make_tree'
+	from ../../ruby/binary-trees/binary-trees.rb:26:in `block in <main>'
+	from ../../ruby/binary-trees/binary-trees.rb:24:in `each'
+	from ../../ruby/binary-trees/binary-trees.rb:24:in `<main>'

@@ -1,0 +1,36 @@
+C
+Average time: 41.59 sec
+Average CPU time: 39.05 sec
+Average memory usage: 1025.2 KB
+
+C++
+Average time: 27.91 sec
+Average CPU time: 27.44 sec
+Average memory usage: 1026.9 KB
+
+Erlang
+Average time: 29.48 sec
+Average CPU time: 28.03 sec
+Average memory usage: 6680.5 KB
+
+Fortran
+Average time: 35.05 sec
+Average CPU time: 34.52 sec
+Average memory usage: 1026.1 KB
+
+Java
+Average time: 28.56 sec
+Average CPU time: 148.15 sec
+Average memory usage: 2058.8 KB
+
+Python
+Average time: 51.26 sec
+Average CPU time: 48.77 sec
+Average memory usage: 7240.8 KB
+
+Rust 
+Average time: 36.18 sec
+Average CPU time: 35.71 sec
+Average memory usage: 1025.9 KB
+
+Ruby
