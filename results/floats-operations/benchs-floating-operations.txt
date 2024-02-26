@@ -1,0 +1,90 @@
+C
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Result = 9.740886, Time = 0.073335 seconds
+Float addition: Result = 9.124690, Time = 0.051522 seconds
+Float division: Result = 0.156470, Time = 0.071244 seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result = 9.740893, Time = 0.041854 seconds
+Double addition: Result = 9.124691, Time = 0.087772 seconds
+Double division: Result = 0.156470, Time = 0.151717 seconds
+
+C++
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Result = 9.740886, Time = 0.082706 seconds
+Float addition: Result = 9.124690, Time = 0.052050 seconds
+Float division: Result = 0.156470, Time = 0.073026 seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result = 9.740893, Time = 0.035609 seconds
+Double addition: Result = 9.124691, Time = 0.139281 seconds
+Double division: Result = 0.156470, Time = 0.180372 seconds
+
+Erlang
+
+Benchmarking float (actually double in Erlang) operations:
+Float multiplication: Time = 95 milliseconds
+Float addition: Time = 66 milliseconds
+Float division: Time = 65 milliseconds
+
+Fortran 
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Result =    9.74088573     , Time =    7.0000000298023224E-002  seconds
+Float addition: Result =    9.12469006     , Time =    4.8999998718500137E-002  seconds
+Float division: Result =   0.156469941     , Time =    7.0000000298023224E-002  seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result =    9.7408930688616007      , Time =    4.8999998718500137E-002  seconds
+Double addition: Result =    9.1246913469124671      , Time =    5.4999999701976776E-002  seconds
+Double division: Result =   0.15647003457989989      , Time =    9.3999996781349182E-002  seconds
+
+Java 
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Result = 9.740886, Time = 0.026276 seconds
+Float addition: Result = 9.124690, Time = 0.025280 seconds
+Float division: Result = 0.156470, Time = 0.025660 seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result = 9.740893, Time = 0.026893 seconds
+Double addition: Result = 9.124691, Time = 0.024622 seconds
+Double division: Result = 0.156470, Time = 0.043376 seconds
+
+Python
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Result = 9.740885, Time = 1.682148 seconds
+Float addition: Result = 9.124690, Time = 1.720449 seconds
+Float division: Result = 0.156470, Time = 1.788993 seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result = 9.740893, Time = 1.766352 seconds
+Double addition: Result = 9.124691, Time = 2.128481 seconds
+Double division: Result = 0.156470, Time = 2.319678 seconds
+
+Ruby
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Result = 9.740885481741, Time = 2.269518429 seconds
+Float addition: Result = 9.12469, Time = 2.329596539 seconds
+Float division: Result = 0.1564699308236386, Time = 2.422069699 seconds
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Result = 9.7408930688616, Time = 2.348435751 seconds
+Double addition: Result = 9.124691346912467, Time = 3.072008888 seconds
+Double division: Result = 0.15647003457989989, Time = 3.107398916 seconds
+
+Rust 
+
+Benchmarking float (32-bit) operations:
+Float multiplication: Time = 0.211581 seconds, Result = 9.740886
+Float addition: Time = 0.192312 seconds, Result = 9.124690
+Float division: Time = 0.196129 seconds, Result = 0.156470
+
+Benchmarking double (64-bit) operations:
+Double multiplication: Time = 0.209577 seconds, Result = 9.740893
+Double addition: Time = 0.201398 seconds, Result = 9.124691
+Double division: Time = 0.203278 seconds, Result = 0.156470

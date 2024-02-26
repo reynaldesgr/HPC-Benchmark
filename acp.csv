@@ -1,0 +1,9 @@
+Language,BinaryTrees_AverageTime,BinaryTrees_AverageCPUTime,BinaryTrees_AverageMemoryUsage,FannkuchRedux_AverageTime,FannkuchRedux_AverageCPUTime,FannkuchRedux_AverageMemoryUsage
+C,41.59,39.05,1025.2,64.09,63.6,0.94
+C++,27.91,27.44,1026.9,36.42,378.9,2.32
+Erlang,29.48,28.03,6680.5,36.15,369.6,51.41
+Fortran,35.05,34.52,1026.1,53.97,53.38,1.36
+Java,28.56,148.15,2058.8,34.15,33.75,38.78
+Python,51.26,48.77,7240.8,551.89,551.34,8.79
+Rust,36.18,35.71,1025.9,82.61,82.18,0.99
+Ruby,178.0,177.41,5259.9,720.62,720.05,20.82

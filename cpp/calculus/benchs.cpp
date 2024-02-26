@@ -65,3 +65,15 @@ int main() {
     benchmark_double_operations();
     return 0;
 }
+
+/**
+    Benchmarking float (32-bit) operations:
+    Float multiplication: Result = 9.740886, Time = 0.060458 seconds
+    Float addition: Result = 9.124690, Time = 0.036351 seconds
+    Float division: Result = 0.156470, Time = 0.072349 seconds
+
+    Benchmarking double (64-bit) operations:
+    Double multiplication: Result = 9.740893, Time = 0.036679 seconds
+    Double addition: Result = 9.124691, Time = 0.103726 seconds
+    Double division: Result = 0.156470, Time = 0.142266 seconds
+*/

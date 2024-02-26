@@ -122,7 +122,7 @@ struct planet bodies[NBODIES] = {
 
 int main(int argc, char ** argv)
 {
-  int n = atoi(argv[1]);
+  int n = 50000000;
   int i;
 
   offset_momentum(NBODIES, bodies);

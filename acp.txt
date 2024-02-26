@@ -1,3 +1,6 @@
+BINARY-TREES
+input : 25
+
 C
 Average time: 41.59 sec
 Average CPU time: 39.05 sec
@@ -34,3 +37,74 @@ Average CPU time: 35.71 sec
 Average memory usage: 1025.9 KB
 
 Ruby
+Average time: 178.00 sec
+Average CPU time: 177.41 sec
+Average memory usage: 5259.9 KB
+
+==============================================================================
+FANNKUCH-REDUX
+input : 12
+
+C
+Average time: 64.09 sec
+Average CPU time: 63.60 sec
+Average memory usage: 0.94 KB
+
+C++
+Average time: 36.42 sec
+Average CPU time: 378.90 sec
+Average memory usage: 2.32 KB
+
+Erlang
+Average time: 36.15 sec
+Average CPU time: 369.60 sec
+Average memory usage: 51.409375 KB
+
+Java 
+Average time: 34.15 sec
+Average CPU time: 33.75 sec
+Average memory usage: 38.78 KB
+
+Fortran
+Average time: 53.97 sec
+Average CPU time: 53.38 sec
+Average memory usage: 1.36 KB
+
+Python
+Average time: 551.89 sec
+Average CPU time: 551.34 sec
+Average memory usage: 8.79 KB
+
+Rust
+Average time: 82.61 sec
+Average CPU time: 82.18 sec
+Average memory usage: 0.99 KB
+
+Ruby
+Average time: 720.62 sec
+Average CPU time: 720.05 sec
+Average memory usage: 20.82 KB
+
+==============================================================================
+SORT
+input : 1000000
+
+C 
+Average time: 21.20 sec
+Average CPU time: 20.74 sec
+Average memory usage: 1.32 KB
+
+C++
+Average time: 45.63 sec
+Average CPU time: 45.09 sec
+Average memory usage: 4.07 KB
+
+Erlang
+Average time: 14.02 sec
+Average CPU time: 23.40 sec
+Average memory usage: 104.96 KB
+
+Fortran
+Average time: 20.63 sec
+Average CPU time: 20.20 sec
+Average memory usage: 2.32 KB

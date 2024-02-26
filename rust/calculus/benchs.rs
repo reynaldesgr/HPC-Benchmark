@@ -62,16 +62,3 @@ fn main() {
     println!("\nBenchmarking double (64-bit) operations:");
     benchmark_double_operations();
 }
-
-
-/**
-    Benchmarking float (32-bit) operations:
-    Float multiplication: Time = 0.336470 seconds, Result = 9.740886
-    Float addition: Time = 0.329845 seconds, Result = 9.124690
-    Float division: Time = 0.356023 seconds, Result = 0.156470
-
-    Benchmarking double (64-bit) operations:
-    Double multiplication: Time = 0.338277 seconds, Result = 9.740893
-    Double addition: Time = 0.356930 seconds, Result = 9.124691
-    Double division: Time = 0.351496 seconds, Result = 0.156470
-**/

@@ -1,4 +1,4 @@
-n = 2
+n = 26
 real    0m32.736s
 user    0m24.552s
 sys     0m5.624s

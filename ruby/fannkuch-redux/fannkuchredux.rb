@@ -48,6 +48,6 @@ def fannkuch(n)
     end
   end
   
-  n = (ARGV[0] || 1).to_i
+  n = 12
   sum, flips = fannkuch(n)
   printf "%d\nPfannkuchen(%d) = %d\n", sum, n, flips
