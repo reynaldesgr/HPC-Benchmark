@@ -62,10 +62,10 @@ compile_and_run() {
 
         PROGRAM_PID=$!
 
-        sudo powerjoular -p $PROGRAM_PID >> "$RESULTS_FILE" &
+        sudo powerjoular -tp $PROGRAM_PID >> "$RESULTS_FILE" &
         POWERJOULAR_PID=$!
 
-        sleep 25
+        sleep 60
 
         kill -INT $POWERJOULAR_PID
         echo "[Measure] - Done."
